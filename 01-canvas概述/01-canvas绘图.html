@@ -5,25 +5,29 @@
     <title>canvas绘图</title>
     <style>
         #canvas{
-            background-color: antiquewhite;
+            background: antiquewhite;
         }
     </style>
 </head>
 <body>
-    <canvas id="canvas" width="600" height="700"></canvas>
-    <script>
-        const canvas=document.getElementById('canvas')
-        // canvas.width=300
-        // canvas.height=150
-        //画笔
-        const ctx=canvas.getContext('2d')
-        // const ctx=canvas.getContext('webgl')
-        //红色的填充矩阵
-        ctx.fillStyle='red'
-        ctx.fillRect(
-            50,100,
-            400,200
-        )
-    </script>
+<canvas id="canvas" width="700" height="800"></canvas>
+<script>
+    //画布
+    const canvas=document.getElementById('canvas')
+    //设置尺寸
+    // canvas.width=300
+    // canvas.height=150
+    //画笔
+    const ctx=canvas.getContext('2d')
+    // const ctx=canvas.getContext('webgl')
+    //红色的填充矩形
+    ctx.fillStyle='red'
+    ctx.fillRect(
+        100,100,
+        400,200
+    )
+
+
+</script>
 </body>
 </html>
