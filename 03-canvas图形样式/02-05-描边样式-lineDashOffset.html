@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,3 +53,59 @@
 </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>描边样式</title>
+    <style>
+        html{height: 100%;overflow: hidden;}
+        body{height: 100%;margin: 0;}
+        #canvas{
+            background: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    const canvas=document.getElementById('canvas');
+    //canvas充满窗口
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+    //画笔
+    const  ctx=canvas.getContext('2d');
+
+    /*strokeStyle：描边的着色样式*/
+    ctx.strokeStyle='maroon';
+
+    /*lineWidth：描边宽*/
+    ctx.lineWidth=4;
+
+    /* lineDashOffset 虚线偏移  */
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(50,100);
+    ctx.lineTo(700,100);
+    ctx.setLineDash([60]);
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(50,150);
+    ctx.lineTo(700,150);
+    ctx.setLineDash([60]);
+    ctx.lineDashOffset=-80
+    ctx.stroke();
+    ctx.restore();
+
+
+
+
+
+</script>
+</body>
+</html>
+>>>>>>> 64bd6d6b7d4eb65fc5a8ad3bed89404ab1fc4450
